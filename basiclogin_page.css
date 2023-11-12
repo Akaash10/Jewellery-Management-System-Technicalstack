@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: url(./img/signinbg.jpeg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2px;
+}
+.first-sec{
+    height: 550px;
+    width: 520px;
+    background-color: white;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: 45px auto 40px;
+    grid-template-rows: auto;
+    grid-template-areas: "a b c";
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.first-sec img{
+    height: 45px;
+    width: 100px;
+    background-color: transparent;
+}
+.first-secmain{
+    grid-area: b;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px 80px 150px 60px 10px 45px 50px;
+    grid-template-areas: "e e e e e e e"
+    "f f f f f f f"
+    "g g g g g g g"
+    "h h h h h h h"
+    "i i i i i i i"
+    "j j j j j j j"
+    "k k k k k k k";
+}
+.secmaina{
+    grid-area: e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.secmainb{
+    grid-area: f;
+    font-weight: 500;
+    font-size: 24px;
+}
+.secmainc{
+    grid-area: g;
+}
+.secmainc input{
+    margin-bottom: 8px;
+}
+#p1{
+    font-size:18px;
+    font-weight: 350;
+}
+#b1{
+    height: 38px;
+    width: 150px;
+    margin-right: 5px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: #081AAA;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+}
+#b1:hover{
+    opacity: .9;
+    cursor: pointer;
+}
+#b2{
+    height:45px;
+    width: 99%;
+    font-size: 18px;
+    background-color: #F8F8F8;
+    border-style: none;
+    padding-left: 2px;
+    border: 1px solid grey;
+}
+#b3{
+    height: 44px;
+    width: 95%;
+    margin-left: 10px;
+    margin-top: 3px;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    background-color: #159AFF;
+    border-radius: 3px;
+    border-style: none;
+}
+#b3:hover{
+    cursor: pointer;
+    opacity: .9;
+}
+.secmaind{
+    grid-area: h;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.secmaind p{
+    font-size: 17px;
+    font-weight: 500;
+    color:#159AFF;
+}
+.secmaine{
+    grid-area:i;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.secmaind p,.secmaing img:hover{
+    cursor: pointer;
+}
+#ep{
+    font-size: 17px;
+}
+.secmainf{
+    grid-area: j;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.secmaing img{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+}
+.secmaing{
+    grid-area: k;
+    display: flex;
+    gap:15px;
+    align-items: center;
+    justify-content: center;
+}
+#fp{
+    font-size: 16px;
+    font-weight: 500;
+    color:black;
+}
