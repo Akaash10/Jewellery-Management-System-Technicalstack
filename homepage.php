@@ -155,7 +155,7 @@ $conn = new mysqli($host, $username, $password, $database);
                 <div class="content-c" id="displayProduct">
                 <?php
                 $output='';
-                $sql='select * from add_product';
+                $sql='select * from product_details';
                 $exe=mysqli_query($conn,$sql);
                 if($exe->num_rows>0){
                     while($res=mysqli_fetch_array($exe)){
@@ -178,7 +178,7 @@ $conn = new mysqli($host, $username, $password, $database);
                 </div>
         
                 <?php
-                $sql = "SELECT * FROM add_product";
+                $sql = "SELECT * FROM product_details";
                 $result = $conn->query($sql);
                 ?>
             </div>
