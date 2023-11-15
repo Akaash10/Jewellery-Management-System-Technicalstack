@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 80px 85% auto;
+    grid-template-columns: auto;
+    grid-template-areas: "a"
+    "b"
+    "c";
+}
+.header{
+    grid-area: a;
+}
+.main{
+    grid-area: b;
+    background-image: url(./img/signinbg.jpeg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    width: 430px;
+    border-radius: 20px;
+    border: 1px solid grey;
+    background-color: rgb(222, 222, 222);
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.main-box form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    gap: 4px;
+    margin-left: 5px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.main-box form input{
+    width: 55%;
+    border-radius: 5px;
+    border-style: none;
+    border: 1px solid grey;
+    padding: 5px;
+}
+#description{
+    width: 90%;
+}
+#b:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+#b{
+    height: 33px;
+    background-color: lightslategray;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+#delete-button {
+    background-color: maroon;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#delete-button:hover {
+    opacity: .8;
+}
+.myfooter{
+    grid-area: c;
+    background-color: #F2E9E9;
+    color: maroon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mynavbar{
+    height: 80px;
+    width: 100%;
+    background-color: #F2E9E9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mynavbar-content{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#in-bar{
+    height: 35px;
+    width: 600px;
+    border-style: none;
+    font-size: 13px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.mynavbar-content img{
+    height: 65px;
+    padding-right: 15px;
+}
+#nav-font{
+    font-size: 11px;
+}
+.icon-flex{
+    display: flex;
+    gap: 25px;
+    margin-left: 12px;
+    color: maroon;
+    margin-top: 5px;
+}
+#g1{
+    margin-left: 18px;
+}
+#g2{
+    margin-left: 8px;
+}
+#g3{
+    margin-left: 14px;
+}
+#g4{
+    margin-left: 12px;
+}
+#g5{
+    margin-left: 2px;
+}
+#g1:hover{
+    height: 19px;
+    width: 19px;
+}
+#g2:hover{
+    height: 19px;
+    width: 19px;
+}
+#g3:hover{
+    height: 19px;
+    width: 19px;
+}
+#g4:hover{
+    height: 19px;
+    width: 19px;
+}
+#g5:hover{
+    height: 19px;
+    width: 19px;
+}
