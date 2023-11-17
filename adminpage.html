@@ -3,7 +3,7 @@
 <head>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update_product_description</title>
+    <title>Admin_Page</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -184,7 +184,6 @@
                   Update Product
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item bi" href="#" id="updateName">Update Product Name</a>
                   <a class="dropdown-item bi" href="#" id="updateDescription">Update Product Description</a>
                   <a class="dropdown-item bi" href="#" id="updateDuration">Update Product Duration</a>
                 </div>
@@ -222,11 +221,6 @@
         });
 
         document.getElementById("viewProductBtn").addEventListener("click", function(event) {
-            event.preventDefault();
-            loadContent("view.html");
-        });
-
-        document.getElementById("updateName").addEventListener("click", function(event) {
             event.preventDefault();
             loadContent("view.html");
         });
