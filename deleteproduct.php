@@ -12,7 +12,7 @@ $name = $_POST['name'];
 $duration = $_POST['duration'];
 $sql1 = "DELETE FROM product_details WHERE name='$name' AND duration='$duration'";
 if ($conn->query($sql1) === TRUE) {
-    header("Location: schemepage.php");
+    echo '<script>alert("Deleted successfully"); window.location.href = "adminpage.html";</script>';
     exit();
 } else {
     echo "Error: " . $sql1 . "<br>" . $conn->error;

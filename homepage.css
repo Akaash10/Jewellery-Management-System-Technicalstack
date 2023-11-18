@@ -377,19 +377,3 @@
     color: maroon;
     text-decoration: none;
 }
-
-#r-button{
-    height: 35px;
-    width: 120px;
-    border: 1px solid maroon;
-    color: maroon;
-    font-size: 18px;
-    border-radius: 5px;
-    margin-bottom: 25px
-}
-#r-button:hover{
-    color: white;
-    background-color: maroon;
-    transition-timing-function: linear;
-    transition: 1s;
-}

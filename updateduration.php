@@ -11,7 +11,7 @@ $name = $_POST['name'];
 $duration = $_POST['duration'];
 $sql1 = "UPDATE product_details SET duration='$duration' WHERE name='$name'";
 if ($conn->query($sql1) === TRUE) {
-    header("Location: schemepage.php");
+    echo '<script>alert("Duration updated successfully"); window.location.href = "adminpage.html";</script>';
     exit();
 } else {
     echo "Error: " . $sql1 . "<br>" . $conn->error;

@@ -7,7 +7,6 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -124,6 +123,7 @@
         .main-b{
             grid-area: cb;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
@@ -140,10 +140,37 @@
             width: 200px;
             background-color: maroon;
             opacity: .9;
+            height: 40px;
             color: #F2E9E9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        
+        #addProductBtn:hover{
+            opacity: .8;
+        }
+        #deleteProductBtn:hover{
+            opacity: .8;
+        }
+        #viewProductBtn:hover{
+            opacity: .8;
+        }
+        #updateProductBtn:hover{
+            opacity: .8;
         }
         #bi{
             width: 200px;
+        }
+        #fs{
+            color: maroon;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        #as{
+            color: gray;
+            font-weight: 700;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
     </style>
 </head>
@@ -178,7 +205,7 @@
         <div class="main-a">
             <a href="#" class="btn btn-secondary" id="addProductBtn">Add Product</a>
             <a href="#" class="btn btn-secondary" id="deleteProductBtn">Delete Product</a>
-            <a href="#" class="btn btn-secondary" id="viewProductBtn">View Product</a>
+            <a href="view.php" target="_blank" class="btn btn-secondary" id="viewProductBtn">View Product</a>
             <div class="dropdown show">
                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="updateProductBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                   Update Product
@@ -191,7 +218,8 @@
         </div>
 
         <div class="main-b">
-
+            <h1 id="as">Welcome Admin</h1>
+            <h2 id="fs">You can Add, Delete and View Your Scheme Product Cards Here.</h2>
         </div>
     </div>
     <div class="myfooter">
@@ -209,7 +237,7 @@
                 })
                 .catch(error => console.error("Error fetching content:", error));
         }
-
+            
         document.getElementById("addProductBtn").addEventListener("click", function(event) {
             event.preventDefault();
             loadContent("add_product_box.html");
@@ -220,10 +248,7 @@
             loadContent("delete_product_box.html");
         });
 
-        document.getElementById("viewProductBtn").addEventListener("click", function(event) {
-            event.preventDefault();
-            loadContent("view.html");
-        });
+
 
         document.getElementById("updateDescription").addEventListener("click", function(event) {
             event.preventDefault();

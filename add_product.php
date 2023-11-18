@@ -16,7 +16,7 @@ $row = $result->fetch_assoc();
 $nextProductNumber = $row['MAX(product_id)'] + 1;
 $sql1 = "INSERT INTO product_details (product_id, name, description, duration) VALUES ($nextProductNumber,'$name', '$description', '$duration')";
 if ($conn->query($sql1) === TRUE) {
-    header("Location: schemepage.php");
+    echo '<script>alert("Product addded successfully"); window.location.href = "adminpage.html";</script>';
     exit();
 } else {
     echo "Error: " . $sql1 . "<br>" . $conn->error;
