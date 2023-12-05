@@ -17,7 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['role'] = $row['role'];
         
         if ($_SESSION['role'] === 'admin') {
-            header('Location: homepage.php');
+            header('Location: adminpage.html');
+        }
+        else if ($_SESSION['role'] === 'user') {
+            header('Location: template.html');
         } 
         else {
             header('Location: user_register.html');

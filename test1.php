@@ -33,6 +33,9 @@ $conn = new mysqli($host, $username, $password, $database);
         display: flex;
         align-items: center;
         justify-content: center;
+        position: sticky;
+        top: 0;
+         z-index: 1000; 
     }
     .mynavbar-content{
         display: flex;
@@ -306,7 +309,8 @@ $conn = new mysqli($host, $username, $password, $database);
     }
     .content{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
+        gap: 50px;
         align-items: center;
         height: 55vh;
         width: 100%;
@@ -357,7 +361,7 @@ $conn = new mysqli($host, $username, $password, $database);
     button:hover,
     button:focus {
         background: white;
-        color: cornflowerblue;
+        color: dodgerblue;
     }
 
     .modalx {
@@ -436,6 +440,9 @@ $conn = new mysqli($host, $username, $password, $database);
     }
     #showModalButton:hover {
         background-color: #0056b3;
+    }
+    #ts{
+        font-size: 15px;
     }
     </style>
 </head>
@@ -623,7 +630,7 @@ $conn = new mysqli($host, $username, $password, $database);
                                 <span class="closex" id="closeModal">&times;</span>
                                 <h2>Terms and Conditions</h2>
                                 <div id="termsContent">
-                                <p>1. This is a advance jewellery BOOKING plan. NO REFUND of money is allowed under any circumstances under the plan. <br>
+                                <p id="ts">1. This is a advance jewellery BOOKING plan. NO REFUND of money is allowed under any circumstances under the plan. <br>
         
                                 2. The plan is unique and will not be linked to any other existing or future plans / offers and is not transferable under any circumstance.<br>
         
@@ -651,7 +658,7 @@ $conn = new mysqli($host, $username, $password, $database);
                                 
                                 14. The person, who has enrolled in online application form, should sign on the invoice and prebooking bond at the time of purchase of jewellery. Produce ID & Address proof and bank passbook at the time of joining and redemption. Online Enrolled member if not come for jewellery purchase, the nominee ID and address proof shall be furnished along with declaration letter duly signed by the original enrolled member of respective scheme.<br>
                                 
-                                15. In case the member does not take delivery of the jewellery within 365 days from the enrolment date, sale invoice will be raised in the name of the member towards sale of jewellery, applicable GST on sale value will be paid to the Government and the ornaments weight due to the member will be held as “stock in custody” by the company till the member takes delivery of the ornament. This will be displayed in customer ledger in online app under the option Closed Scheme. The member can see their ledger and dues at any time and any where in mobile app and website under Lalithaa Jewellery Online Scheme. The offline member will be communicated/informed by the company in this regard by email / hard copy.<br>
+                                15. In case the member does not take delivery of the jewellery within 365 days from the enrolment date, sale invoice will be raised in the name of the member towards sale of jewellery, applicable GST on sale value will be paid to the Government and the ornaments weight due to the member will be held as “stock in custody” by the company till the member takes delivery of the ornament. This will be displayed in customer ledger in online app under the option Closed Scheme. The member can see their ledger and dues at any time and any where in mobile app and website under Lalithaa Jewellery Online Scheme. The offline member will be communicated/informed by the company in this regard by email / hard copy.<br></p>
                                 </div>
                                 <label>
                                     <input type="checkbox" id="acceptCheckbox"> I accept the terms and conditions
@@ -839,4 +846,11 @@ $conn = new mysqli($host, $username, $password, $database);
     acceptCheckbox.addEventListener("change", toggleRegisterButton);
 
 </script>
+<script>
+document.getElementById("registerButton").addEventListener("click", function() {
+    // Redirect to index.html
+    window.location.href = "user_login.html";
+});
+</script>
+
 </html>

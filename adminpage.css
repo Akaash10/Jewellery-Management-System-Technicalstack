@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 80px 85% auto;
+    grid-template-columns: auto;
+    grid-template-areas: "a"
+    "b"
+    "c";
+}
+.header{
+    grid-area: a;
+}
+.mynavbar{
+    height: 80px;
+    width: 100%;
+    background-color: #F2E9E9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mynavbar-content{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#in-bar{
+    height: 35px;
+    width: 600px;
+    border-style: none;
+    font-size: 13px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.mynavbar-content img{
+    height: 65px;
+    padding-right: 15px;
+}
+#nav-font{
+    font-size: 11px;
+}
+.icon-flex{
+    display: flex;
+    gap: 25px;
+    margin-left: 12px;
+    color: maroon;
+    margin-top: 5px;
+}
+#g1{
+    margin-left: 18px;
+}
+#g2{
+    margin-left: 8px;
+}
+#g3{
+    margin-left: 14px;
+}
+#g4{
+    margin-left: 12px;
+}
+#g5{
+    margin-left: 2px;
+}
+#g1:hover{
+    height: 19px;
+    width: 19px;
+}
+#g2:hover{
+    height: 19px;
+    width: 19px;
+}
+#g3:hover{
+    height: 19px;
+    width: 19px;
+}
+#g4:hover{
+    height: 19px;
+    width: 19px;
+}
+#g5:hover{
+    height: 19px;
+    width: 19px;
+}
+.main{
+    grid-area: b;
+    display: grid;
+    grid-template-columns: 16% auto;
+    grid-template-rows: auto;
+    grid-template-areas: "ca cb";
+}
+.main-a{
+    grid-area: ca;
+    margin: 1px 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-b{
+    grid-area: cb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.myfooter{
+    grid-area: c;
+    background-color: #F2E9E9;
+    color: maroon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addProductBtn:hover{
+    opacity: .8;
+}
+#deleteProductBtn:hover{
+    opacity: .8;
+}
+#viewProductBtn:hover{
+    opacity: .8;
+}
+#updateProductBtn:hover{
+    opacity: .8;
+}
+#bi{
+    width: 200px;
+}
+#fs{
+    color: maroon;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#as{
+    color: gray;
+    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+#main-container {
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    height: 100%;
+    transition: .3s;
+    background: #ffffff12;
+    padding: 20px 20px 20px 0;
+    width: 85px;
+    box-shadow: 8px 0px 9px 0px #00000014;
+    backdrop-filter: blur(5px);
+}
+
+.menu:hover {
+    width: 100%;
+    transition: 1s;
+}
+
+.menu:hover li span:nth-child(2) {
+    display: block;
+}
+
+.menu-content li {
+    list-style: none;
+    border-radius: 0px 50px 50px 0;
+    transition: .3s;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.menu-content li:hover {
+    background: lightgray;
+    color: black;
+}
+
+.menu-content li span:nth-child(2) {
+    display: none;
+}
+
+.af{
+    color: black;
+    font-size: 18px;
+}
+.menu-content li a {
+    text-decoration: none;
+    color: rgb(213, 213, 213);
+    display: flex;
+    align-items: center;
+    font-family: 'calibri';
+}
+
+.material-symbols-outlined {
+    font-size: 25px;
+    margin-right: 10px;
+    background: maroon;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+
+

@@ -110,10 +110,11 @@ body{
     align-items: center;
     justify-content: center;  
 }
-.secmaind p{
+#ds{
     font-size: 17px;
     font-weight: 500;
     color:#159AFF;
+    text-decoration: none;
 }
 .secmaine{
     grid-area:i;

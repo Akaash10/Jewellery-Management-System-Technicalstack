@@ -11,168 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        body{
-            height: 100vh;
-            width: 100%;
-            display: grid;
-            grid-template-rows: 80px 85% auto;
-            grid-template-columns: auto;
-            grid-template-areas: "a"
-            "b"
-            "c";
-        }
-        .header{
-            grid-area: a;
-        }
-        .mynavbar{
-            height: 80px;
-            width: 100%;
-            background-color: #F2E9E9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .mynavbar-content{
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        #in-bar{
-            height: 35px;
-            width: 600px;
-            border-style: none;
-            font-size: 13px;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .mynavbar-content img{
-            height: 65px;
-            padding-right: 15px;
-        }
-        #nav-font{
-            font-size: 11px;
-        }
-        .icon-flex{
-            display: flex;
-            gap: 25px;
-            margin-left: 12px;
-            color: maroon;
-            margin-top: 5px;
-        }
-        #g1{
-            margin-left: 18px;
-        }
-        #g2{
-            margin-left: 8px;
-        }
-        #g3{
-            margin-left: 14px;
-        }
-        #g4{
-            margin-left: 12px;
-        }
-        #g5{
-            margin-left: 2px;
-        }
-        #g1:hover{
-            height: 19px;
-            width: 19px;
-        }
-        #g2:hover{
-            height: 19px;
-            width: 19px;
-        }
-        #g3:hover{
-            height: 19px;
-            width: 19px;
-        }
-        #g4:hover{
-            height: 19px;
-            width: 19px;
-        }
-        #g5:hover{
-            height: 19px;
-            width: 19px;
-        }
-        .main{
-            grid-area: b;
-            display: grid;
-            grid-template-columns: 15% 85%;
-            grid-template-rows: auto;
-            grid-template-areas: "ca cb";
-        }
-        .main-a{
-            grid-area: ca;
-            margin: 1px 1px;
-            border-top: 1px solid gray;
-            border-bottom: 1px solid gray;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            align-items: center;
-            justify-content: center;
-            background-color: #F2E9E9;
-        }
-
-        .main-b{
-            grid-area: cb;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .myfooter{
-            grid-area: c;
-            background-color: #F2E9E9;
-            color: maroon;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #addProductBtn,#deleteProductBtn,#viewProductBtn,#updateProductBtn{
-            width: 200px;
-            background-color: maroon;
-            opacity: .9;
-            height: 40px;
-            color: #F2E9E9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-        }
-        
-        #addProductBtn:hover{
-            opacity: .8;
-        }
-        #deleteProductBtn:hover{
-            opacity: .8;
-        }
-        #viewProductBtn:hover{
-            opacity: .8;
-        }
-        #updateProductBtn:hover{
-            opacity: .8;
-        }
-        #bi{
-            width: 200px;
-        }
-        #fs{
-            color: maroon;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
-        #as{
-            color: gray;
-            font-weight: 700;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="./adminpage.css">
 </head>
 <body>
     <div class="header">
@@ -203,20 +43,20 @@
     
     <div class="main">
         <div class="main-a">
-            <a href="#" class="btn btn-secondary" id="addProductBtn">Add Product</a>
-            <a href="#" class="btn btn-secondary" id="deleteProductBtn">Delete Product</a>
-            <a href="view.php" target="_blank" class="btn btn-secondary" id="viewProductBtn">View Product</a>
-            <div class="dropdown show">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="updateProductBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                  Update Product
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item bi" href="#" id="updateDescription">Update Product Description</a>
-                  <a class="dropdown-item bi" href="#" id="updateDuration">Update Product Duration</a>
+            <div id="main-container">
+                <div class="menu">
+                    <ul class="menu-content">
+                        <li><a href="#" id="adminBtn"><span class="material-symbols-outlined">home</span><span class="af">Home</span></a></li>
+                        <li><a href="#" id="addProductBtn"><span class="material-symbols-outlined">Add</span><span class="af">AddProduct</span></a></li>
+                        <li><a href="#" id="updateDescription"><span class="material-symbols-outlined">update</span><span class="af">UpdateProduct_Description</span></a></li>
+                        <li><a href="#" id="updateDuration"><span class="material-symbols-outlined">update</span><span class="af">UpdateProduct_Duration</span></a></li>
+                        <li><a href="#" id="deleteProductBtn"><span class="material-symbols-outlined">Delete</span><span class="af">DeleteProduct</span></a></li>
+                        <li><a href="./view.php" target="_blank"><span class="material-symbols-outlined">visibility</span><span class="af">ViewProduct</span></a></li>
+                        <li><a href="./user_login.html" id="logout"><span class="material-symbols-outlined">logout</span><span class="af">Logout</span></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-
         <div class="main-b">
             <h1 id="as">Welcome Admin</h1>
             <h2 id="fs">You can Add, Delete and View Your Scheme Product Cards Here.</h2>
@@ -237,7 +77,16 @@
                 })
                 .catch(error => console.error("Error fetching content:", error));
         }
-            
+        
+        document.getElementById("adminBtn").addEventListener("click", function(event) {
+            event.preventDefault();
+            loadContent("adminpageone.html");
+        });
+
+        document.getElementById("addProductBtn").addEventListener("click", function(event) {
+            event.preventDefault();
+            loadContent("add_product_box.html");
+        });
         document.getElementById("addProductBtn").addEventListener("click", function(event) {
             event.preventDefault();
             loadContent("add_product_box.html");
@@ -247,8 +96,6 @@
             event.preventDefault();
             loadContent("delete_product_box.html");
         });
-
-
 
         document.getElementById("updateDescription").addEventListener("click", function(event) {
             event.preventDefault();
