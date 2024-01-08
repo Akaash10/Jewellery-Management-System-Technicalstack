@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bind_param("sssss", $nextUserNumber,$first_name, $last_name, $mobile_number, $password);
 
         if ($stmt->execute()) {
-            header("Location: user_login.html");
+            header("Location: /PROJECT_JEWEL/USER/User_login/user_login.html");
             exit();
         } else {
             echo "Error: " . $conn->error;
