@@ -3,7 +3,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST["phone"];
     $password = $_POST["password"];
     $host = "localhost"; 
-    $username = "akaash"; 
+    $username = "root"; 
     $password_db = "Achielles@20"; 
     $database = "miniproject"; 
     $conn = new mysqli($host, $username, $password_db, $database);

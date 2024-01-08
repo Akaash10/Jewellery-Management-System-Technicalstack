@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Invalid mobile number format. Please enter a 10-digit number.";
     } 
     else {
-        $conn = new mysqli("localhost", "akaash", "Achielles@20", "miniproject");
+        $conn = new mysqli("localhost", "root", "Achielles@20", "miniproject");
 
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
