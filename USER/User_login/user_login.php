@@ -17,18 +17,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['role'] = $row['role'];
         
         if ($_SESSION['role'] === 'admin') {
-            header('Location: adminpage.html');
+            header('Location: /PROJECT_JEWEL/ADMIN/Admin_panel/adminpage.html');
         }
         else if ($_SESSION['role'] === 'user') {
             header('Location: template.html');
         } 
         else {
-            header('Location: user_register.html');
+            header('Location: /PROJECT_JEWEL/USER/User_register/user_register.html');
         }
     } 
     else {
         echo '<script type="text/javascript">alert("Invalid username or password.");';
-        echo 'window.location.href = "user_login.html";</script>';
+        echo 'window.location.href = "/PROJECT_JEWEL/USER/User_login/user_login.html";</script>';
         exit;
     }
     

@@ -9,9 +9,10 @@ if ($conn->connect_error) {
 }
 $name = $_POST['name'];
 $duration = $_POST['duration'];
-$sql1 = "UPDATE product_details SET duration='$duration' WHERE name='$name'";
+$description=$_POST['description'];
+$sql1 = "UPDATE product_details SET description='$description' WHERE name='$name' AND duration='$duration'";
 if ($conn->query($sql1) === TRUE) {
-    echo '<script>alert("Duration updated successfully"); window.location.href = "adminpage.html";</script>';
+    echo '<script>alert("Description updated successfully"); window.location.href = "/PROJECT_JEWEL/ADMIN/Admin_panel/adminpage.html";</script>';
     exit();
 } else {
     echo "Error: " . $sql1 . "<br>" . $conn->error;

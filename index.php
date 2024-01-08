@@ -6,11 +6,11 @@ $database = "miniproject";
 $conn = new mysqli($host, $username, $password, $database);
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Homepage</title>
-    <link rel="stylesheet" href="./homepage.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -19,7 +19,430 @@ $conn = new mysqli($host, $username, $password, $database);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="./homepage.js"></script>
+    <script src="./index.js"></script>
+    <style>
+        *{
+    padding:0;
+    margin:0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .mynavbar{
+        height: 70px;
+        width: 100%;
+        background-color: #F2E9E9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+         z-index: 1000; 
+    }
+    .mynavbar-content{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    #in-bar{
+        height: 35px;
+        width: 600px;
+        border-style: none;
+        font-size: 13px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .mynavbar-content img{
+        height: 65px;
+        padding-right: 15px;
+    }
+    #nav-font{
+        font-size: 11px;
+    }
+    .icon-flex{
+        display: flex;
+        gap: 25px;
+        margin-left: 12px;
+        color: maroon;
+        margin-top: 5px;
+    }
+    #g1{
+        margin-left: 18px;
+    }
+    #g2{
+        margin-left: 8px;
+    }
+    #g3{
+        margin-left: 14px;
+    }
+    #g4{
+        margin-left: 12px;
+    }
+    #g5{
+        margin-left: 2px;
+    }
+    #g1:hover{
+        height: 19px;
+        width: 19px;
+    }
+    #g2:hover{
+        height: 19px;
+        width: 19px;
+    }
+    #g3:hover{
+        height: 19px;
+        width: 19px;
+    }
+    #g4:hover{
+        height: 19px;
+        width: 19px;
+    }
+    #g5:hover{
+        height: 19px;
+        width: 19px;
+    }
+
+    .card-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        justify-content: flex-start;
+        height: 430px;
+        width: 100%;
+    }
+    #c1{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 40px;
+        margin: 4px;
+    }
+    .card-content-flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 280px;
+        width: 100px;
+        gap: 50px;
+    }
+    .s-content{
+        height: 260px;
+        width: 180px;
+        border: 1px solid gray;
+    }
+    .s-content:hover{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    }
+    #sp{
+        text-align: center;
+        font-size: 18px;
+        padding-top: 5px;
+        color: maroon;
+        font-weight: 600;
+    }
+    #spf{
+        text-align: center;
+        font-size: 15px;
+        padding-top: 5px;
+        color: gray;
+        font-weight: 200;
+    }
+    #spf:hover{
+        font-size: 14px;
+    }
+
+
+    .video-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 550px;
+        width: 100%;
+    }
+    .v{
+        height: 500px;
+        width: 70%;
+        position: relative; 
+        border-radius: 20px;
+    }
+    .v video {
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover;
+    }
+
+
+    .new-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        justify-content: flex-start;
+        height: 590px;
+        width: 100%;
+    }
+    .new-content-flex{
+        height: 500px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+    #l-content{
+        height: 400px;
+        width: 390px;
+        border: 1px solid gray;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    #l-content:hover{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    }
+    #l-button{
+        height: 40px;
+        width: 150px;
+        border: 1px solid maroon;
+        color: maroon;
+        font-size: 18px;
+        border-radius: 5px;
+        margin-bottom: 25px
+    }
+    #l-button:hover{
+        color: white;
+        background-color: maroon;
+        transition-timing-function: linear;
+        transition: 1s;
+    }
+
+
+    .myfooter{
+        background-color: #EDE8EA;
+        height:500px;
+        width: 100%;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .mybox{
+        width: 400px;
+        height: 400px;
+        background-color: #EDE8EA;
+        color:black;
+    }
+    .demo{
+        padding-top: 8px;
+        font-size: 17px;
+    }
+    .box2{
+        width: 300px;
+        height: 400px;
+        background-color: #EDE8EA;
+        color:black;
+    }
+    .mybox nav{
+        margin-top: 10px;
+        text-align: left;
+    }
+    .mybox p{
+        margin-top: 10px;
+        text-align: left;
+        margin-left: 50px;
+        font-size: 23px;
+    }
+    .mybox a,ul{
+        text-decoration: none;
+        color: black;
+        list-style-type:none;
+        padding: 20px;
+    }
+    .mybox li{
+        padding: 15px;
+        font-size: 16px;
+    }
+    .box1 div{
+        display: inline;
+        float:left;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    .demo2{
+        display: inline;
+    }
+    .demo2 img{
+        width: 120px;
+        height: 130px;
+        margin-left: 20px;
+    }
+    .box2 p{
+        text-align: left;
+        font-size: large;
+        margin-left: 20px;
+    }
+    .demo4 a{
+        text-decoration: none;
+        color: black;
+    }
+    .box2{
+        width: 400px;
+        height: 400px;
+        background-color:#EDE8EA;
+        color:black;
+    }
+    .myfooter a:hover{
+        color: maroon;
+        text-decoration: none;
+    }
+
+    .brochure-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        justify-content: flex-start;
+        height: 630px;
+        width: 100%;
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        align-items: center;
+        height: 55vh;
+        width: 100%;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 400px;
+        width: 300px;
+        border-radius: 20px;
+        border: 1px solid grey;
+        transition: transform 0.9s;
+        transform-style: preserve-3d;
+    }
+    .face {
+        --flow-space: 1rem;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+    }
+    .back {
+        display: grid;
+        place-items: center;
+        background: rgb(223, 195, 195);
+        border-radius: 20px;
+        transform: rotateY(180deg);
+    }
+    .card:focus,
+    .card:hover {
+        transform: rotateY(180deg);
+    }
+    .button {
+    border: 1px solid white;
+    background: none;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: lighter;
+    padding: 1rem;
+    transition-duration: 0.30s;
+    cursor: pointer;
+  }
+    button:hover,
+    button:focus {
+        background: white;
+        color: dodgerblue;
+    }
+
+    .modalx {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-contentx {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-height: 40%; /* Set a maximum height for the modal content */
+        overflow-y: auto; /* Enable vertical scrolling if the content exceeds the height */
+        position: relative;
+    }
+
+    .closex {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .reduce-motion .back {
+        z-index: 2;
+        opacity: 0;
+        pointer-events: none;
+        transition-duration: 0.6s;
+        transform: none;
+    }
+
+    .reduce-motion .card:focus,
+    .reduce-motion .card:focus-within,
+    .reduce-motion .card:hover {
+        transform: none;
+    }
+
+    .reduce-motion .card:focus .back,
+    .reduce-motion .card:focus-within .back,
+    .reduce-motion .card:hover .back {
+        opacity: 1;
+        pointer-events: all;
+        transform: none;
+    }
+    #r-button{
+        height: 35px;
+        width: 130px;
+        border: 1px solid maroon;
+        color: maroon;
+        font-size: 18px;
+        border-radius: 5px;
+        margin-bottom: 25px
+    }
+    #r-button:hover{
+        color: white;
+        background-color: maroon;
+        transition-timing-function: linear;
+        transition: 1s;
+    }
+    #showModalButton {
+        padding: 3px 5px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    #showModalButton:hover {
+        background-color: #0056b3;
+    }
+    #ts{
+        font-size: 15px;
+    }
+    </style>
 </head>
 <body>
     <div class="mynavbar">
@@ -151,63 +574,98 @@ $conn = new mysqli($host, $username, $password, $database);
         </p>
         <p style="font-size: 18px;">For your future towards small savings. We'll build together!</p>
         <img src="./img/hr.png" alt="">
-        <div class="main-b-c">
-            <div class="content-c">
-                <div class="content-c" id="displayProduct">
-                <?php
-                $output='';
-                $sql='select * from product_details';
-                $exe=mysqli_query($conn,$sql);
-                if($exe->num_rows>0){
-                    while($res=mysqli_fetch_array($exe)){
-                        $display_name = $res["name"];
-                        $display_description = $res["description"];
-                        $display_duration = $res["duration"];
-                        $output.='<div class="carda">
-                        <div class="face front flow" style="border-radius: 20px;border-style: none;">
-                        <h2></h2>
-                        <p style="font-size:15px;"><b><i>'.$display_name.'</b></i></p>
-                        </div>
-                        <div class="face back">
-                          <button id="r-button" data-toggle="modal" data-target="#myModal" data-name="' . $display_name . '" data-description="' . $display_description . '" data-duration="' . $display_duration . '">Read More</button>
-                        </div>
-                        </div>';
-                    }
-                    echo $output;
-                }
-                ?>
-                </div>
-        
-                <?php
-                $sql = "SELECT * FROM product_details";
-                $result = $conn->query($sql);
-                ?>
+        <div class="content" id="displayProduct">
+                    <?php
+                        $output='';
+                        $sql='select * from product_details';
+                        $exe=mysqli_query($conn,$sql);
+                        if($exe->num_rows>0){
+                        while($res=mysqli_fetch_array($exe)){
+                            $display_name = $res["name"];
+                            $display_description = $res["description"];
+                            $display_duration = $res["duration"];
+                            $output.='<div class="card">
+                            <div class="box face front flow" style="background-image: url(<?php echo $image_url; ?>);border-radius: 20px;border-style: none;height:398px;width:298px;">
+                            <h2></h2>
+                            <p style="margin-top:10px;font-size:20px;"><b><i>'.$display_name.'</b></i></p>
+                            </div>
+                            <div class="face back">
+                            <button id="r-button" data-toggle="modal" data-target="#myModal" data-name="' . $display_name . '" data-description="' . $display_description . '" data-duration="' . $display_duration . '">Read More</button>
+                            </div>
+                            </div>';
+                        }
+                        echo $output;
+                        }
+                    ?>
             </div>
+
             <div class="modal" id="myModal">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-lg">
                   <div class="modal-content">
                   
                     <!-- Modal Header -->
                     <div class="modal-header">
-                      <h4 class="modal-title">Modal Title</h4>
-                      <button type="button" class="close" data-dismiss="modal" id="buttona">&times;</button>
+                        <h4 class="modal-title"><span id="modalName" style="font-size:20px;"></span></h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     
                     <!-- Modal body -->
                     <div class="modal-body">
-                      This is the content of the modal.
+                        <p style="font-size:20px;">Description: <span id="modalDescription"></span></p>
+                        <p style="font-size:20px;">Duration: <span id="modalDuration"></span></p>
+                        <button id="showModalButton" style="font-size:17px;">Accept terms and conditions to register</button>
                     </div>
                     
                     <!-- Modal footer -->
                     <div class="modal-footer">
+                    <button class="btn btn-primary" data-toggle="modal" id="registerButton" style="width:100px;" disabled>Register</button>
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button class="btn btn-primary" data-toggle="modal" >Register</button>
                     </div>
-    
-                 </div>
+                </div>
                </div>
+               <div id="termsModal" class="modalx">
+                            <div class="modal-contentx">
+                                <span class="closex" id="closeModal">&times;</span>
+                                <h2>Terms and Conditions</h2>
+                                <div id="termsContent">
+                                <p id="ts">1. This is a advance jewellery BOOKING plan. NO REFUND of money is allowed under any circumstances under the plan. <br>
+        
+                                2. The plan is unique and will not be linked to any other existing or future plans / offers and is not transferable under any circumstance.<br>
+        
+                                3. The money paid as advance under this plan shall not bear any interest.<br>
+                                
+                                4. Minimum booking amount is Rs.10,000/-. There is no CEILING for the maximum amount and a copy of PAN is to be furnished for amount exceeding Rs.2,00,000/-. All Online payments allowed above Rs.2 Lac except of cash payments. Cash payments shall not be allowed above Rs.1,80,000.<br>
+                                
+                                5. In this plan, MINOR CANNOT BECOME AN APPLICANT/MEMBER.<br>
+                                
+                                6. At the time of joining in the Jewellery Purchase Plan, the member may appoint a NOMINEE by furnishing KYC of both self and nominee. For Online Enrolled Member KYC and selfie photo of both attachment is mandatory.<br>
+                                
+                                7. Payment of monthly instalments can be made through all online payment mode i.e., Debit/Credit Card, UPI /QR, Net Banking, Wallet, Pay Later. EMI card not allowed. bond for payment made can be obtained or sent via courier.<br>
+                                
+                                8. Offline customers payments can be made through Cash, Credit / Debit Card, local cheques it shall be drawn in favour of “Lalithaa Jewellery Mart Private Ltd”. In case of dishonor of cheques, actual bank charges (Rs.200 to Rs.500 as the case maybe) shall be borne by the member. Member should ensure to collect receipt voucher / original membership bond while making payment directly at the respective branch.<br>
+                                
+                                9. The amount you pay is credited in 22 karat grams of gold as per the gold rate prevailing on the date of payment.<br>
+                                
+                                10. The time period for taking delivery of jewellery / purchase shall not exceed 365 days from the commencement date of the plan.<br>
+                                
+                                11. Members have the option to purchase gold coins also.<br>
+                                
+                                12. In case of balance money if any, left out in the plan account after adjusting the purchase price, various items shall be made available such as gold coins, silver coins, gift items and likewise for the members to purchase. Balance money will not be refunded.<br>
+                                
+                                13. Applicable Stone Charges will be collected from the members for ornaments with ruby, emerald, zircon, diamond, special stones, etc. Very few, special items such as oddiyanam, nagaz, kumkumchimizh, thirumangalyam, etc shall attract extra charges.<br>
+                                
+                                14. The person, who has enrolled in online application form, should sign on the invoice and prebooking bond at the time of purchase of jewellery. Produce ID & Address proof and bank passbook at the time of joining and redemption. Online Enrolled member if not come for jewellery purchase, the nominee ID and address proof shall be furnished along with declaration letter duly signed by the original enrolled member of respective scheme.<br>
+                                
+                                15. In case the member does not take delivery of the jewellery within 365 days from the enrolment date, sale invoice will be raised in the name of the member towards sale of jewellery, applicable GST on sale value will be paid to the Government and the ornaments weight due to the member will be held as “stock in custody” by the company till the member takes delivery of the ornament. This will be displayed in customer ledger in online app under the option Closed Scheme. The member can see their ledger and dues at any time and any where in mobile app and website under Lalithaa Jewellery Online Scheme. The offline member will be communicated/informed by the company in this regard by email / hard copy.<br></p>
+                                </div>
+                                <label>
+                                    <input type="checkbox" id="acceptCheckbox"> I accept the terms and conditions
+                                </label>
+                            </div>
+                        </div>
             </div>
-        </div>
+
+            
     </div>
 
     <div class="video-content">
@@ -241,8 +699,8 @@ $conn = new mysqli($host, $username, $password, $database);
 
 
   <div class="first">
-    <div class="footer">
-        <div class="box">
+    <div class="myfooter">
+        <div class="mybox">
             <p>Useful Links</p>
             <nav>
                 <ul>
@@ -255,7 +713,7 @@ $conn = new mysqli($host, $username, $password, $database);
                 </ul>
             </nav>
         </div>
-        <div class="box">
+        <div class="mybox">
             <p>Information</p>
             <nav>
                 <ul>
@@ -267,7 +725,7 @@ $conn = new mysqli($host, $username, $password, $database);
                 </ul>
             </nav>
         </div>
-        <div class="box" id="demo">
+        <div class="mybox" id="demo">
             <p>Contact Us</p>
             <nav>
                 <ul>
@@ -330,4 +788,66 @@ $conn = new mysqli($host, $username, $password, $database);
 <script>
     AOS.init();
   </script>
+  <script>
+    $(document).ready(function () {
+        // Handle the "Read More" button click event
+        $('[data-toggle="modal"]').click(function () {
+            var button = $(this);
+            var name = button.data('name');
+            var description = button.data('description');
+            var duration = button.data('duration');
+
+            // Populate the modal with the data
+            $('#modalName').text(name);
+            $('#modalDescription').text(description);
+            $('#modalDuration').text(duration);
+        });
+    });
+</script>
+<script>
+    
+    var modal = document.getElementById("termsModal");
+    var closeModal = document.getElementById("closeModal");
+    var showModalButton = document.getElementById("showModalButton");
+    var acceptCheckbox = document.getElementById("acceptCheckbox");
+    var registerButton = document.getElementById("registerButton");
+
+    // Function to toggle the Register button based on checkbox state
+    function toggleRegisterButton() {
+        if (acceptCheckbox.checked) {
+            registerButton.disabled = false;
+        } else {
+            registerButton.disabled = true;
+        }
+    }
+
+    // When the user clicks the button, display the modal and check the checkbox
+    showModalButton.onclick = function () {
+        modal.style.display = "block";
+        acceptCheckbox.checked = false; // Ensure the checkbox is unchecked when the modal is shown
+        toggleRegisterButton();
+    }
+
+    // When the user clicks on the close button, hide the modal
+    closeModal.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Listen for changes in the checkbox state and update the Register button accordingly
+    acceptCheckbox.addEventListener("change", toggleRegisterButton);
+
+</script>
+<script>
+document.getElementById("registerButton").addEventListener("click", function() {
+    window.location.href = "/PROJECT_JEWEL/USER/User_login/user_login.html";
+});
+</script>
+
 </html>

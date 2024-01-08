@@ -52,8 +52,8 @@
                         <li><a href="#" id="updateDescription"><span class="material-symbols-outlined">update</span><span class="af">UpdateProduct_Description</span></a></li>
                         <li><a href="#" id="updateDuration"><span class="material-symbols-outlined">update</span><span class="af">UpdateProduct_Duration</span></a></li>
                         <li><a href="#" id="deleteProductBtn"><span class="material-symbols-outlined">Delete</span><span class="af">DeleteProduct</span></a></li>
-                        <li><a href="./view.php" target="_blank"><span class="material-symbols-outlined">visibility</span><span class="af">ViewProduct</span></a></li>
-                        <li><a href="./user_login.html" id="logout"><span class="material-symbols-outlined">logout</span><span class="af">Logout</span></a></li>
+                        <li><a href="/PROJECT_JEWEL/ADMIN/View_product/view.php" target="_blank"><span class="material-symbols-outlined">visibility</span><span class="af">ViewProduct</span></a></li>
+                        <li><a href="/PROJECT_JEWEL/USER/User_login/user_login.html" id="logout"><span class="material-symbols-outlined">logout</span><span class="af">Logout</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -81,31 +81,27 @@
         
         document.getElementById("adminBtn").addEventListener("click", function(event) {
             event.preventDefault();
-            loadContent("adminpageone.html");
+            loadContent("/PROJECT_JEWEL/ADMIN/Admin_panel/adminpageone.html");
         });
 
         document.getElementById("addProductBtn").addEventListener("click", function(event) {
             event.preventDefault();
-            loadContent("add_product_box.html");
-        });
-        document.getElementById("addProductBtn").addEventListener("click", function(event) {
-            event.preventDefault();
-            loadContent("add_product_box.html");
+            loadContent("/PROJECT_JEWEL/ADMIN/Add_product/add_product_box.html");
         });
 
         document.getElementById("deleteProductBtn").addEventListener("click", function(event) {
             event.preventDefault();
-            loadContent("delete_product_box.html");
+            loadContent("/PROJECT_JEWEL/ADMIN/Delete_product/delete_product_box.html");
         });
 
         document.getElementById("updateDescription").addEventListener("click", function(event) {
             event.preventDefault();
-            loadContent("update_description_box.html");
+            loadContent("/PROJECT_JEWEL/ADMIN/Update_product/Update_description/update_description_box.html");
         });
 
         document.getElementById("updateDuration").addEventListener("click", function(event) {
             event.preventDefault();
-            loadContent("updateduration_box.html");
+            loadContent("/PROJECT_JEWEL/ADMIN/Update_product/Update_duration/updateduration_box.html");
         });
     });
 </script>
