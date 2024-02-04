@@ -61,8 +61,7 @@ CREATE TABLE `product_details` (
 
 INSERT INTO `product_details` (`product_id`, `name`, `description`, `duration`) VALUES
 ('1', 'Swarna Lakshmi ', 'This is the perfection level of chit.', '1'),
-('2', 'Swarna Thangam', 'This is the initial stage of chit.', '11'),
-('3', 'Swarna Sanjay', 'This is basic sanjay.', '4');
+('2', 'Swarna Thangam', 'This is the initial stage of chit.', '11');
 
 -- --------------------------------------------------------
 
@@ -84,9 +83,7 @@ CREATE TABLE `user_details` (
 --
 
 INSERT INTO `user_details` (`user_id`, `first_name`, `last_name`, `mobile_number`, `password`, `role`) VALUES
-('1', 'Akaash', 'B', '6379617651', 'Akaashnuu2003#', 'admin'),
-('2', 'a', 'l', '7894561230', 'l', 'user'),
-('3', 'Divya', 'Mam', '7894561233', 'a', 'user');
+('2', 'a', 'l', '7894561230', 'l', 'user');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
